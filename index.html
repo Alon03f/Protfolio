@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="Profile_img/portret.JPG">
+    <link rel="icon" href="Profile_img/icon.png">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -122,11 +122,11 @@
     <section class="projects" id="projects">
         <h2 class="section-title">פרוייקטים</h2>
         <div class="projects-grid">
-            <!-- 1st card -->
+
             <div class="project-card">
                 <img src="Images/img8.avif" alt="Project 1" height="200px" class="project-img">
                 <div class="project-info">
-                    <h3 class="project-title">Neon Dashboard</h3>
+                    <h3 class="project-title">דפי נחיתה</h3>
                     <p class="project-description">
                         A modern admin dashboard with real-time analytics and customizable widgets built with React and
                         D3.js.
@@ -137,82 +137,94 @@
                         <span class="tech-tag">Firebase</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link">
-                            <<i class="fa-light fa-link"></i>></i> Live Demo
-                        </a>
-                        <a href="#" class="project-link">
-                            <i class="fab fa-github"></i>Code
+                        <a href="./pages/Landing_pages.html" class="project-link">
+                            <button type="button" class="project-btn">
+                                צפה בפרויקטים
+                            </button>
                         </a>
                     </div>
                 </div>
             </div>
-            <!-- 2nd card -->
+
             <div class="project-card">
-                <img src="Images/img9.avif" alt="Project 2" height="200px" class="project-img">
+                <img src="Images/img4.avif" alt="Project 1" height="200px" class="project-img">
                 <div class="project-info">
-                    <h3 class="project-title">VR Portfolio</h3>
-                    <p class="project-description">An immersive virtual reality portfolio experience built with Three.js
-                        and WebXR.
+                    <h3 class="project-title">משחקים</h3>
+                    <p class="project-description">
+                        A modern admin dashboard with real-time analytics and customizable widgets built with React and
+                        D3.js.
                     </p>
                     <div class="project-tech">
-                        <span class="tech-tag">Three.js</span>
-                        <span class="tech-tag">WebXR</span>
-                        <span class="tech-tag">GSAP</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">D3.js</span>
+                        <span class="tech-tag">Firebase</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        <a href="./pages/Games.html" class="project-link">
+                            <button type="button" class="project-btn">
+                                צפה בפרויקטים
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
-            <!-- 3rd card -->
+
             <div class="project-card">
-                <img src="Images/img3.avif" alt="Project 3" height="200px" class="project-img">
+                <img src="Images/img8.avif" alt="Project 1" height="200px" class="project-img">
                 <div class="project-info">
-                    <h3 class="project-title">CodeCollab</h3>
-                    <p class="project-description">A real-time collaborative code editor with video chat functionality
-                        using
-                        WebSockets and WebRTC.</p>
+                    <h3 class="project-title">פרויקטים גדולים</h3>
+                    <p class="project-description">
+                        A modern admin dashboard with real-time analytics and customizable widgets built with React and
+                        D3.js.
+                    </p>
                     <div class="project-tech">
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">Socket.io</span>
-                        <span class="tech-tag">WebRTC</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">D3.js</span>
+                        <span class="tech-tag">Firebase</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        <a href="./pages/Full_Projects.html" class="project-link">
+                            <button type="button" class="project-btn">
+                                צפה בפרויקטים
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
+
+        </div>
         </div>
     </section>
 
     <section class="contact" id="contact">
         <h2 class="section-title">צור קשר</h2>
+        <h5 class="note">
+            (הטופס אינו שולח את ההודעה, זהו רק דוגמא)
+        </h5>
 
         <form class="contact-form">
 
             <div class="form-group">
-                <label for="name" class="form-label">Name</label>
+                <label for="name" class="form-label">שם מלא :</label>
                 <input type="text" id="name" class="form-input" required>
             </div>
 
             <div class="form-group">
-                <label for="email" class="form-label">Email</label>
+                <label for="email" class="form-label">כתובת מייל :</label>
                 <input type="email" id="email" class="form-input" required>
             </div>
 
             <div class="form-group">
-                <label for="subject" class="form-label">Subject</label>
+                <label for="subject" class="form-label">נשוא ההודעה :</label>
                 <input type="text" id="subject" class="form-input" required>
             </div>
 
             <div class="form-group">
-                <label for="message" class="form-label">Message</label>
+                <label for="message" class="form-label">תוכן ההודעה :</label>
                 <textarea id="message" class="form-textarea" required></textarea>
             </div>
 
-            <button type="submit" class="submit-btn">Send Message</button>
+            <button type="submit" class="submit-btn">שלח</button>
 
         </form>
     </section>
@@ -220,10 +232,12 @@
 
     <footer>
         <div class="social-links">
-            <a href="#" class="social-link"><i class="fab fa-github">.</i></a>
-            <a href="#" class="social-link"><i class="fab fa-linkedin-in">.</i></a>
-            <a href="#" class="social-link"><i class="fab fa-twitter">.</i></a>
-            <a href="#" class="social-link"><i class="fab fa-instagram">.</i></a>
+            <a href="https://github.com/Alon03f" target="_blank" rel="noopener noreferrer" class="social-link"><i
+                    class="fab fa-github">.</i></a>
+            <a href="https://www.linkedin.com/in/alon-fridman-16a917352?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-linkedin-in">.</i></a>
+            <a href="https://www.instagram.com/alon_z?igsh=OWkxYnVsdXUxNDVt&utm_source=qr" target="_blank"
+                rel="noopener noreferrer" class="social-link"><i class="fab fa-instagram">.</i></a>
         </div>
 
         <p class="copyright">© 2025 AlonFridman. All rights reserved.</p>

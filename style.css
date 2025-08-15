@@ -25,7 +25,6 @@ html {
 
 body {
     background-color: var(--dark-bg);
-    /* background-color: lightblue; */
     color: var(--text-color);
     overflow-x: hidden;
 }
@@ -94,7 +93,7 @@ nav {
     align-items: center;
     min-height: 70vh;
     padding: 0 5%;
-    padding-top: 80px;
+    padding-top: 150px;
     padding-right: 200px;
 }
 
@@ -163,7 +162,7 @@ nav {
 
 .profile-container {
     position: relative;
-    width: 400px;
+    width: 500px;
     height: 400px;
     display: flex;
     justify-content: center;
@@ -282,6 +281,7 @@ nav {
     padding: 5rem 5%;
     background-color: var(--darker-bg);
     position: relative;
+    margin-top: 130px;
 }
 
 .about::before {
@@ -297,7 +297,8 @@ nav {
 .section-title {
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 50px;
     position: relative;
     display: inline-block;
     right: 40%;
@@ -307,7 +308,7 @@ nav {
 .section-title::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: 45px;
     left: 0;
     width: 100%;
     height: 3px;
@@ -359,16 +360,30 @@ nav {
     animation: fillBar 2s ease-out forwards;
 }
 
+@keyframes fillBar {
+    from {
+        width: 10%;
+    }
+
+    to {
+        width: 90%;
+    }
+}
+
 .projects {
     padding: 5rem 5%;
     position: relative;
+    padding-top: 130px;
 }
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(300, 1fr));
+    width: 1050px;
     gap: 2rem;
     margin-top: 2rem;
+    place-items: center;
+    justify-self: center;
 }
 
 .project-card {
@@ -446,6 +461,14 @@ nav {
     padding: 5rem 5%;
     background-color: var(--darker-bg);
     position: relative;
+    padding-top: 130px;
+}
+
+.note {
+    font-size: 0.9rem;
+    color: #ccc;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .contact-form {
@@ -535,6 +558,27 @@ footer {
     font-size: 0.9rem;
 }
 
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-menu a {
+    display: block;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu a:hover {
+    background-color: rgba(83, 144, 217, 0.1);
+    color: var(--neon-blue);
+}
+
 @media (max-width: 992px) {
     .hero {
         flex-direction: column;
@@ -551,33 +595,100 @@ footer {
     }
 }
 
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--neon-blue);
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(12, 12, 12, 0.98);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    z-index: 99;
+}
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
     }
 
-    .hero h1 {
-        font-size: 2.5rem;
+    .mobile-menu-toggle {
+        display: flex;
     }
 
-    .profile-container {
-        width: 300px;
-        height: 300px;
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 120px;
+        min-height: 90vh;
+    }
+
+    .hero-content {
+        margin-bottom: 3rem;
+        max-width: 100%;
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .projects-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 1rem 3%;
+    }
+
+    .hero {
+        padding: 120px 3% 2rem;
+    }
+
+    .about,
+    .projects,
+    .contact {
+        padding: 3rem 3%;
     }
 
     .profile-pic {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
     }
 
     .profile-border {
-        width: 270px;
-        height: 270px;
+        width: 220px;
+        height: 220px;
     }
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -591,4 +702,22 @@ footer {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--neon-pink);
+}
+
+.project-btn {
+    background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 136, 255, 0.3);
+    width: 30vh;
+}
+
+.project-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0, 136, 255, 0.5);
 }

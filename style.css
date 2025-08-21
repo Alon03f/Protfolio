@@ -261,20 +261,95 @@ nav {
     }
 }
 
+/* Individual keyframes for each skill bar */
+@keyframes fillBar1 {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 95%;
+    }
+}
+
+@keyframes fillBar2 {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 90%;
+    }
+}
+
+@keyframes fillBar3 {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 85%;
+    }
+}
+
+@keyframes fillBar4 {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 93%;
+    }
+}
+
+@keyframes fillBar5 {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 86%;
+    }
+}
+
+@keyframes fillBar6 {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 95%;
+    }
+}
+
 .skill-1 {
-    width: 95%
+    width: 95%;
+    animation: fillBar1 2s ease-out forwards;
 }
 
 .skill-2 {
-    width: 90%
+    width: 90%;
+    animation: fillBar2 2s ease-out forwards;
 }
 
 .skill-3 {
-    width: 85%
+    width: 82%;
+    animation: fillBar3 2s ease-out forwards;
 }
 
 .skill-4 {
-    width: 90%
+    width: 93%;
+    animation: fillBar4 2s ease-out forwards;
+}
+
+.skill-5 {
+    width: 86%;
+    animation: fillBar5 2s ease-out forwards;
+}
+
+.skill-6 {
+    width: 95%;
+    animation: fillBar6 2s ease-out forwards;
 }
 
 .about {
@@ -297,20 +372,20 @@ nav {
 .section-title {
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    margin: 0 auto;
-    padding-bottom: 50px;
+    text-align: center;
     position: relative;
-    display: inline-block;
-    right: 40%;
-    transform: translateX(-50%);
+    display: block;
+    width: 100%;
+    padding-top: 50px;
 }
 
 .section-title::after {
     content: '';
     position: absolute;
-    bottom: 45px;
-    left: 0;
-    width: 100%;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
     height: 3px;
     background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
     border-radius: 3px;
@@ -357,23 +432,11 @@ nav {
     height: 100%;
     border-radius: 5px;
     background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
-    animation: fillBar 2s ease-out forwards;
-}
-
-@keyframes fillBar {
-    from {
-        width: 10%;
-    }
-
-    to {
-        width: 90%;
-    }
 }
 
 .projects {
     padding: 5rem 5%;
     position: relative;
-    padding-top: 130px;
 }
 
 .projects-grid {
@@ -381,7 +444,7 @@ nav {
     grid-template-columns: repeat(auto-fill, minmax(300, 1fr));
     width: 1050px;
     gap: 2rem;
-    margin-top: 2rem;
+    margin: 2rem auto 0;
     place-items: center;
     justify-self: center;
 }
@@ -461,7 +524,6 @@ nav {
     padding: 5rem 5%;
     background-color: var(--darker-bg);
     position: relative;
-    padding-top: 130px;
 }
 
 .note {
@@ -469,6 +531,7 @@ nav {
     color: #ccc;
     text-align: center;
     margin-bottom: 2rem;
+    width: 100%;
 }
 
 .contact-form {
@@ -579,6 +642,11 @@ footer {
     color: var(--neon-blue);
 }
 
+.error-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(0, 136, 255, 0.5);
+}
+
 @media (max-width: 992px) {
     .hero {
         flex-direction: column;
@@ -592,6 +660,11 @@ footer {
 
     .about-content {
         flex-direction: column;
+    }
+
+    .projects-grid {
+        width: 100%;
+        justify-content: center;
     }
 }
 
@@ -652,13 +725,13 @@ footer {
     .projects-grid {
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
     .project-card {
         width: 100%;
         max-width: 350px;
     }
-
 }
 
 @media (max-width: 480px) {
@@ -684,6 +757,13 @@ footer {
     .profile-border {
         width: 220px;
         height: 220px;
+    }
+
+    .error-link {
+        bottom: 10px;
+        left: 10px;
+        font-size: 0.8rem;
+        padding: 8px 12px;
     }
 }
 

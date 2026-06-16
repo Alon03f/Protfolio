@@ -1,3 +1,8 @@
+/* ==========================================
+   PAGES LAYOUT - Specific styles for project pages
+   These complement the main style.css
+   ========================================== */
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -6,25 +11,7 @@
     max-width: 1200px;
     padding: 0 2rem;
     direction: rtl;
-    justify-items: start;
-}
-
-.project-card {
-    width: 100%;
-    max-width: 400px;
-    background-color: var(--darker-bg);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    position: relative;
-    border: 1px solid #333;
-    margin: 0;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 136, 255, 0.2);
-    border: 1px solid var(--neon-blue);
+    justify-items: center;
 }
 
 .projects {
@@ -40,7 +27,13 @@
 
 .projects-grid .project-card {
     display: block;
+    width: 100%;
+    max-width: 400px;
 }
+
+/* ==========================================
+   RESPONSIVE DESIGN - Pages
+   ========================================== */
 
 @media (min-width: 1200px) {
     .projects-grid {

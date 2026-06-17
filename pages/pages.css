@@ -1,78 +1,109 @@
 /* ==========================================
-   PAGES LAYOUT - Specific styles for project pages
-   These complement the main style.css
+   PROJECT PAGES - Page-specific layout fixes
+   Complements ../style.css without changing the visual language
    ========================================== */
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    margin: 2rem auto 0;
-    max-width: 1200px;
-    padding: 0 2rem;
-    direction: rtl;
-    justify-items: center;
+body {
+    min-height: 100vh;
 }
 
 .projects {
-    padding: 5rem 2%;
-    position: relative;
-    padding-top: 130px;
+    padding: 130px 2% 5rem;
 }
 
 .projects .section-title {
-    text-align: center;
     margin-bottom: 3rem;
 }
 
-.projects-grid .project-card {
-    display: block;
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
     width: 100%;
-    max-width: 400px;
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding: 0 2rem;
+    direction: rtl;
+    justify-items: stretch;
+    align-items: stretch;
 }
 
-/* ==========================================
-   RESPONSIVE DESIGN - Pages
-   ========================================== */
+.projects-grid .project-card {
+    width: 100%;
+    max-width: 420px;
+    justify-self: center;
+    display: flex;
+    height: 100%;
+}
+
+.projects-grid .project-img {
+    height: 200px;
+}
+
+.projects-grid .project-links {
+    margin-top: auto;
+}
+
+.projects + .contact {
+    padding-top: 4rem;
+}
 
 @media (min-width: 1200px) {
     .projects-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         max-width: 1400px;
     }
 }
 
 @media (max-width: 1199px) and (min-width: 768px) {
     .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         max-width: 900px;
     }
 }
 
 @media (max-width: 767px) {
+    .projects {
+        padding-top: 105px;
+    }
+
     .projects-grid {
         grid-template-columns: 1fr;
-        max-width: 400px;
-        justify-items: center;
+        max-width: 480px;
         padding: 0 1rem;
     }
 
-    .project-card {
+    .projects-grid .project-card {
         max-width: 100%;
-    }
-
-    .section-title {
-        text-align: center;
-        margin-top: 4rem;
     }
 }
 
 @media (max-width: 480px) {
     .projects {
-        padding: 3rem 1%;
+        padding: 95px 1% 3rem;
     }
 
     .projects-grid {
         gap: 1.5rem;
+        padding: 0 0.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav .nav-links {
+        display: flex;
+        gap: 1rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    nav {
+        gap: 0.75rem;
+    }
+
+    nav .nav-links {
+        gap: 0.75rem;
+        font-size: 0.95rem;
     }
 }

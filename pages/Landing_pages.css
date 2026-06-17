@@ -1,0 +1,3 @@
+/* Page-specific stylesheet.
+   Shared project-page styling is kept in pages.css to avoid duplicated code. */
+@import url("pages.css");
